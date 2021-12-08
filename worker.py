@@ -7,6 +7,6 @@ os.system("sudo apt-add-repository 'deb http://apt.kubernetes.io/ kubernetes-xen
 os.system("sudo apt-get install kubeadm kubelet kubectl")
 os.system("sudo apt-mark hold kubeadm kubelet kubectl")
 os.system("sudo hostnamectl set-hostname Worker-node1")
-os.system("sudo cp /configure/daemon.json  /etc/docker/")
+os.system("sudo cp daemon.json  /etc/docker/")
 os.system("sudo systemctl restart docker ")
 print("Enter the Key for join worker node to the master node")
