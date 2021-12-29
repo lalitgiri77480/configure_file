@@ -13,7 +13,7 @@ os.system("sudo  kubeadm init --pod-network-cidr=10.240.0.0/16 --ignore-prefligh
 os.system("mkdir -p $HOME/.kube")
 os.system("sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config")
 os.system("sudo chown $(id -u):$(id -g) $HOME/.kube/config")
-os.system("sudo kubectl apply  -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml")
 os.system("kubectl get nodes")
+print("After Join the node you can add the network overlay in the k8s cluster using network.py file ")
 print("K8s Master Is Succefully Created ....... Master is Ready For USE !!!!!")
 
