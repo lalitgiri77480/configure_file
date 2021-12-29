@@ -14,6 +14,6 @@ os.system("mkdir -p $HOME/.kube")
 os.system("sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config")
 os.system("sudo chown $(id -u):$(id -g) $HOME/.kube/config")
 os.system("kubectl get nodes")
-print("After Join the node you can add the network overlay in the k8s cluster using network.py file ")
+os.system("sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml")
 print("K8s Master Is Succefully Created ....... Master is Ready For USE !!!!!")
 
